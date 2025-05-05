@@ -7,7 +7,7 @@ Brings dark mode sanity to `/php/login.php` and `/php/logout.php` without sacrif
 
 - Removes bright yellow background applied by PANW scripts
 - Applies a dark, eye-pleasing theme across the entire login UI
-- Fixes contrast issues in MOTD / "Pancake Services" footer
+- Fixes contrast issues in MOTD footer
 - Styles inputs, buttons, and text for clean readability
 - Uses CSS variables for easy customization
 
