@@ -1,0 +1,97 @@
+/* ==UserStyle==
+@name           The Login That Blinded Me
+@namespace      https://github.com/greaselovely/Login-That-Blinded-Me
+@version        1.0.0
+@description    Remove the WTF Strata Blinding Yellow
+@author         greaselovely
+==/UserStyle== */
+
+
+/*
+Modify the following colors to your liking:
+*/
+
+:root {
+    --bg-main: #1e1e1e;
+    --bg-panel: #2a2a2a;
+    --text-main: #e0e0e0;
+    --text-muted: #bbbbbb;
+    --accent: #80bfff;
+    --btn-bg: #333;
+    --btn-hover: #444;
+  }
+  
+  @-moz-document regexp("https?://[^/]+/php/(login|logout)\\.php.*") {
+    html, body, body[style] {
+      background: var(--bg-main) !important;
+      background-image: none !important;
+      color: var(--text-main) !important;
+    }
+  
+    .login-panel, .card, .login-card, .container,
+    .login_fields, .message_wrapper {
+      background-color: var(--bg-panel) !important;
+      color: var(--text-main) !important;
+      box-shadow: none !important;
+      border-radius: 6px !important;
+    }
+  
+    input {
+      background-color: var(--bg-main) !important;
+      color: var(--text-main) !important;
+      border: 1px solid #555 !important;
+      font-weight: 500 !important;
+    }
+  
+    input::placeholder {
+      color: var(--text-muted) !important;
+    }
+  
+    input:focus {
+      border-color: var(--accent) !important;
+      outline: none !important;
+    }
+  
+    button, .btn, .login-btn,
+    input[type="submit"] {
+      background-color: var(--btn-bg) !important;
+      color: var(--text-main) !important;
+      border: none !important;
+      border-radius: 20px !important;
+      padding: 0.5em 2em !important;
+    }
+  
+    button:hover, .btn:hover, .login-btn:hover,
+    input[type="submit"]:hover {
+      background-color: var(--btn-hover) !important;
+      cursor: pointer !important;
+    }
+  
+    button:disabled,
+    input[type="submit"]:disabled {
+      background-color: #444 !important;
+      color: #888 !important;
+    }
+  
+    #motd, #motd .msg, #motd .msg pre {
+      background: transparent !important;
+      color: var(--text-muted) !important;
+      border: none !important;
+      box-shadow: none !important;
+      font-size: 1em !important;
+      text-align: center !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  
+    #motd {
+      padding: 0.5em !important;
+      margin-top: 1em !important;
+      border: none !important;
+    }
+  
+    img {
+      filter: brightness(0.9) !important;
+    }
+  }
+  
